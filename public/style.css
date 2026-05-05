@@ -1,0 +1,154 @@
+/* Importando uma fonte mais moderna e limpa do Google Fonts (opcional, mas dá um toque premium) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    /* Cinza bem claro e moderno */
+    color: #1f2937;
+    /* Cinza escuro para o texto (menos agressivo que o preto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    /* Bordas mais arredondadas */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    /* Sombra mais suave e espalhada */
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #111827;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: -6px;
+}
+
+input {
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    outline: none;
+    font-size: 14px;
+    color: #374151;
+    transition: all 0.2s ease;
+}
+
+/* Efeito de foco elegante nos inputs */
+input:focus {
+    border-color: #6366f1;
+    /* Tom de Indigo */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+button {
+    padding: 12px;
+    background-color: #6366f1;
+    /* Indigo moderno */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #4f46e5;
+    transform: translateY(-1px);
+    /* Leve efeito de levantar ao passar o mouse */
+}
+
+/* Cores específicas para botões de ação (Ex: Deletar) */
+button[style*="background-color: #dc3545"] {
+    background-color: #ef4444 !important;
+}
+
+button[style*="background-color: #dc3545"]:hover {
+    background-color: #dc2626 !important;
+}
+
+/* Navegação minimalista */
+nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    color: #6b7280;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+nav a:hover {
+    color: #6366f1;
+    background-color: #e0e7ff;
+    /* Fundo suave ao passar o mouse */
+}
+
+/* Tabela redesenhada */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #f9fafb;
+    color: #4b5563;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+    /* Destaque leve na linha da tabela */
+}

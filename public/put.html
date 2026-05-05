@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atualizar - CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bloco">
+        <h1>Atualizar Registro (PUT)</h1>
+        <form>
+            <div class="grupo">
+                <label>Buscar CPF:</label>
+                <input type="text" id="cpfBusca" placeholder="Digite o CPF para buscar">
+            </div>
+            <input type="button" onclick="buscarDados()" value="Buscar Registro">
+
+            <hr style="margin: 20px 0;">
+
+            <div class="grupo"><label>ID (Automático):</label><input type="text" id="id" readonly></div>
+            <div class="grupo"><label>CPF:</label><input type="text" id="cpfAtualizar" readonly></div>
+            <div class="grupo"><label>Nome:</label><input type="text" id="nomeAtualizar"></div>
+            <div class="grupo"><label>Sobrenome:</label><input type="text" id="sobrenomeAtualizar"></div>
+            <div class="grupo"><label>RG:</label><input type="text" id="rgAtualizar"></div>
+            <div class="grupo"><label>Idade:</label><input type="text" id="idadeAtualizar"></div>
+            <div class="grupo"><label>Email:</label><input type="email" id="emailAtualizar"></div>
+            <div class="grupo"><label>Telefone:</label><input type="text" id="telefoneAtualizar"></div>
+            <div class="grupo"><label>Rua:</label><input type="text" id="ruaAtualizar"></div>
+            <div class="grupo"><label>Bairro:</label><input type="text" id="bairroAtualizar"></div>
+            <div class="grupo"><label>Cidade:</label><input type="text" id="cidadeAtualizar"></div>
+            <div class="grupo"><label>Estado:</label><input type="text" id="estadoAtualizar"></div>
+
+            <input type="button" onclick="atualizarDados()" value="Salvar Alterações">
+        </form>
+        <nav>
+            <a href="post.html">POST</a> | <a href="get.html">GET</a> | <a href="put.html">PUT</a> | <a
+                href="delete.html">DELETE</a>
+        </nav>
+    </div>
+    <script src="put/put.js"></script>
+</body>
+
+</html>
