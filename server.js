@@ -1,44 +1,26 @@
-//Importar a biblioteca json-server
+const express = require('express');
 const jsonServer = require('json-server');
+const path = require('path');
 
-// Criar um instancia do servidor JsonServer 
-//Essa instancia é usada para criar e configurar o servidor
-const server = jsonServer.create();
-
-//Criar um roteador com o arquivo db.json 
-//O roteador define as rotas do servidor. Ele utiliza um arquivo JSON para gerar a rota.
+const app = express();
 const router = jsonServer.router('db.json');
-
-//Funções que são executadas em cada requisição feita com o servidor
-//Importa os padrões JsonServer
 const middlewares = jsonServer.defaults();
 
-//Funções que são executadas em cada requisição feita com o servidor
-server.use(middlewares);
+// Configura a porta dinâmica para o Render
+const porta = process.env.PORT || 3000;
 
-//Define a porta em que o servidor irá rodar
-const porta = 3000;
+// 1. Usar Middlewares padrão (logger, static, etc)
+app.use(middlewares);
+app.use(express.json());
 
-//Usa o roteador criado
-server.use(router);
+// 2. Servir os arquivos da sua pasta public
+app.use(express.static(path.join(__dirname, 'public')));
 
-//Importa o módulo express
-const express = require('express');
+// 3. Rota para o JSON Server (API)
+// Isso faz com que suas requisições fetch('/pessoas') funcionem
+app.use(router);
 
-//Criando variavel instancia do express
-const app = express();
-
-//Configura o servidor para usar
-app.use(express.static('public'));
-
-//Defini a rota principal
-//Enviando o arquivo index.html
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/public/index.html');
-})
-
-//Inicia o servidor na porta definida e exibe uma mensagem no console
-server.listen(porta, () => {
-    console.log(`JSON SERVER está rodando em http://localhost:${porta}`);
-})
-
+// Inicia o servidor unificado
+app.listen(porta, () => {
+    console.log(`Servidor unificado rodando na porta ${porta}`);
+});
