@@ -1,0 +1,86 @@
+/* BASE QUE VOCÊ JÁ TEM */
+body {
+    font-family: sans-serif;
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+    /* Limita a largura para não esticar demais */
+    border: 1px solid #000;
+    box-shadow: 5px 5px 0px #ccc;
+}
+
+h1,
+h2 {
+    color: #000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    /* Borda preta para combinar com os botões */
+    text-transform: uppercase;
+    /* Garante que o usuário veja tudo em maiúsculo ao digitar */
+}
+
+/* ORGANIZAÇÃO EM COLUNAS PARA CAMPOS CURTOS */
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+/* BOTÕES */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #333;
+}
+
+.btn-voltar {
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+/* TABELA (PÁGINA GET) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th,
+td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #eee;
+}

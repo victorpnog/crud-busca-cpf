@@ -1,0 +1,19 @@
+{
+  "pessoas": [
+    {
+      "nome": "FERNANDA",
+      "sobrenome": "PORTES",
+      "email": "ABC@GMAIL.COM",
+      "idade": "22",
+      "telefone": "(11)11111-1111",
+      "cpf": "99999999999",
+      "rg": "000000000",
+      "rua": "DASDA",
+      "bairro": "DASDA",
+      "cidade": "UBATUBA",
+      "estado": "",
+      "id": "C-lu5fFinlk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

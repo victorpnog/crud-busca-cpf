@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir Registro - CRUD</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Excluir Registro (DELETE)</h2>
+        <p style="margin-bottom: 15px; font-size: 13px;">INFORME O CPF PARA REMOÇÃO PERMANENTE:</p>
+
+        <input type="text" id="cpfExcluir" placeholder="000.000.000-00" oninput="maskCPF(this)" maxlength="14">
+
+        <button style="background: #000; color: #fff;" onclick="deletarDados()">CONFIRMAR EXCLUSÃO</button>
+        <button class="btn-voltar" onclick="location.href='../'">VOLTAR AO MENU</button>
+    </div>
+
+    <script src="delete.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Registros</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .container {
+            max-width: 95%;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Consulta de Registros (GET)</h2>
+
+        <div style="margin-bottom: 20px;">
+            <input type="text" id="buscaCpf" placeholder="BUSCAR POR CPF..." oninput="maskCPF(this)">
+            <button onclick="filtrarPorCpf()">BUSCAR</button>
+            <button class="btn-voltar" onclick="carregarDados()" style="margin-top: 5px;">LIMPAR BUSCA /
+                ATUALIZAR</button>
+        </div>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOME COMPLETO</th>
+                        <th>EMAIL</th>
+                        <th>IDADE</th>
+                        <th>TELEFONE</th>
+                        <th>CPF</th>
+                        <th>RG</th>
+                        <th>ENDEREÇO</th>
+                        <th>CIDADE/UF</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela"></tbody>
+            </table>
+        </div>
+
+        <button class="btn-voltar" onclick="location.href='../'">VOLTAR AO MENU</button>
+    </div>
+
+    <script src="get.js"></script>
+
+</body>
+
+</html>
